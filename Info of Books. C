@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+struct Book {
+    char title[100];
+    char author[100];
+    int year;
+    char genre[50];
+    char isbn[20];
+};
+
+void displayDetails(struct Book b) {
+    printf("Book Details:\n");
+    printf("Title: %s\n", b.title);
+    printf("Author: %s\n", b.author);
+    printf("Publication Year: %d\n", b.year);
+}
+
+int main() {
+   
+    struct Book book1 = {"The R15 Rider", "Darshu", 2022, "Fiction"};
+    struct Book book2 = {"To Kill a Mockingbird", "Harper Lee", 1960, "Fiction"};
+    
+    displayDetails(book1);
+    displayDetails(book2);
+    
+    return 0;
+}
